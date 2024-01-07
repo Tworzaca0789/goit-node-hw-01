@@ -1,11 +1,8 @@
-import * as fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import { nanoid } from "nanoid";
-import * as path from "node:path";
+import path from "node:path";
 
-const contactsPath = path.join(
-  process.cwd(),
-  "homework-goit-node/goit-node-hw-01/db/contacts.json"
-);
+const contactsPath = path.join(process.cwd(), "/db/contacts.json");
 
 export const listContacts = async () => {
   const data = await fs.readFile(contactsPath);
